@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>BibliOS - Tela Inicial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1 class="titulo-sistema">BibliOS</h1>
+    <p class="subtitulo-sistema">Sistema de Gestão de Biblioteca</p>
+
+    <div class="menu-blocos">
+        
+        <a href="cadastro-livros.html" class="botao-atalho">Cadastrar Livros</a>
+
+        <a href="cadastro-leitores.html" class="botao-atalho">Cadastrar Leitores</a>
+
+        <a href="cadastrar-emprestimos.html" class="botao-atalho">Fazer Empréstimos</a>
+
+        <a href="devolucao-livros.html" class="botao-atalho">Devolução de Livros</a>
+
+    </div>
+    
+<h3> Lista de Leitores</h3>
+<form>
+
+<label for="busca">Buscar por nome:</label>
+<input type="text" id="busca" name="busca" placeholder="DIGITE O NOME">
+</form>
+<br><br>
+
+<table border="5">
+  <tr>
+    <th>Foto</th>
+    <th>Nome</th>
+    <th>E-mail</th>
+    <th>Telefone</th>
+    <th>Status</th>
+    <th>Resumo (Devolvidos | Em empréstimo | Atrasados)</th>
+  </tr>
+  <tr>
+    <td><img src="foto.jpg" alt="Foto" width="40"></td>
+    <td>João Silva</td>
+    <td>joao@email.com</td>
+    <td>(11) 98765-4321</td>
+    <td>Ativo</td>
+    <td>5 devolvidos | 2 em empréstimo | 0 atrasados</td>
+  </tr>
+</table>
+<br><br>
+<h3>Lista de Empréstimos</h3>
+
+<form class="filtro-simples">
+  <label for="filtro_atrasados">
+    <input type="checkbox" id="filtro_atrasados" name="filtro_atrasados"> 
+    Mostrar apenas atrasados
+  </label>
+</form>
+
+<table>
+  <tr>
+    <th>Pessoa</th>
+    <th>Livro</th>
+    <th>Data de Saída</th>
+    <th>Data Prevista</th>
+    <th>Situação</th>
+  </tr>
+  <tr>
+    <td>
+      <div class="info-tabela">
+        <img src="foto.jpg" alt="Foto" width="40" class="foto-perfil"> 
+        João Silva
+      </div>
+    </td>
+    <td>
+      <div class="info-tabela">
+        <img src="capa.jpg" alt="Capa" width="30" class="capa-livro"> 
+        O Senhor dos Anéis
+      </div>
+    </td>
+    <td>10/10/2023</td>
+    <td>24/10/2023</td>
+    <td><span class="badge entregue">Entregue</span></td>
+  </tr>
+  <tr>
+    <td>
+      <div class="info-tabela">
+        <img src="foto2.jpg" alt="Foto" width="40" class="foto-perfil"> 
+        Maria Oliveira
+      </div>
+    </td>
+    <td>
+      <div class="info-tabela">
+        <img src="capa2.jpg" alt="Capa" width="30" class="capa-livro"> 
+        Casa assombrada
+      </div>
+    </td>
+    <td>01/10/2023</td>
+    <td>15/10/2023</td>
+    <td><span class="badge atrasado">Atrasado</span></td>
+  </tr>
+</table>
+
+<br><br>
+
+</body>
+<footer>
+    <a href="quem-somos.html">Quem somos nós</a>
+</footer>
+</html>
