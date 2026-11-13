@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>BibliOS - Cadastro de Leitores</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <a href="index.php" class="link-voltar">← Voltar para o Menu</a>
+    
+    <h3 class="titulo-pagina-cadastro"> Cadastro de Leitores</h3>
+    <div class="caixa-formulario">
+        <h2 class="titulo-formulario">Cadastro de Leitor</h2>
+        
+        <form action="leitor.php" method="POST" enctype="multipart/form-data">
+            
+            <div class="campo-grupo">
+                <label for="nome" class="rotulo-principal">Nome Completo:</label>
+                <input type="text" id="nome" name="nome_completo" class="caixa-entrada" required>
+            </div>
+
+            <div class="campo-grupo">
+                <label for="email" class="rotulo-principal">E-mail:</label>
+                <input type="email" id="email" name="email" class="caixa-entrada" required>
+            </div>
+
+            <div class="campo-grupo">
+                <label for="telefone" class="rotulo-principal">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" class="caixa-entrada" required>
+            </div>
+
+            <div class="campo-grupo">
+                <label for="nascimento" class="rotulo-principal">Data de Nascimento:</label>
+                <input type="date" id="nascimento" name="data_nascimento" class="caixa-entrada" required>
+            </div>
+
+            <div class="campo-grupo">
+                <label for="foto" class="rotulo-principal">Upload de Foto 3x4:</label>
+                <input type="file" id="foto" name="foto_leitor" class="caixa-entrada" accept="image/*" required>
+            </div>
+
+            <div class="campo-grupo">
+                <label class="rotulo-principal">Status do Cadastro:</label>
+                <div class="grupo-radio">
+                    <label class="opcao-radio">
+                        <input type="radio" name="status_leitor" value="Ativo" checked> Ativo
+                    </label>
+                    <label class="opcao-radio">
+                        <input type="radio" name="status_leitor" value="Inativo"> Inativo
+                    </label>
+                </div>
+            </div>
+
+            <button type="submit" class="botao-salvar">Salvar Cadastro</button>
+
+        </form>
+    </div>
+
+</body>
+</html>
+
+</html>

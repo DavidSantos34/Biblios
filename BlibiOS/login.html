@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BibliOS | Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-page">
+  <main>
+    <section class="login-card">
+      <div class="login-brand">
+        <div class="login-icon">📚</div>
+        <h1>BibliOS</h1>
+        <p>Sistema de Gestão de Biblioteca</p>
+      </div>
+      <h2>Bem-vindo de volta!</h2>
+      <p class="login-intro">Entre com seus dados para acessar o sistema.</p>
+      <div class="login-error" id="loginError" role="alert">E-mail ou senha incorretos. Tente novamente.</div>
+      <form id="loginForm">
+        <div class="login-field">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" placeholder="seuemail@exemplo.com" autocomplete="username" required>
+        </div>
+        <div class="login-field">
+          <label for="senha">Senha</label>
+          <input type="password" id="senha" placeholder="Digite sua senha" autocomplete="current-password" required>
+        </div>
+        <button class="login-submit" type="submit">Entrar no sistema</button>
+      </form>
+      <p class="login-demo">Acesso para demonstração:<br><strong>admin@biblios.com</strong> · <strong>123456</strong></p>
+    </section>
+    <p class="login-footer">© BibliOS · Gestão simples e organizada</p>
+  </main>
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const email = document.getElementById('email').value.trim().toLowerCase();
+      const senha = document.getElementById('senha').value;
+      if (email === 'admin@biblios.com' && senha === '123456') {
+        window.location.href = 'painel.html';
+      } else {
+        document.getElementById('loginError').style.display = 'block';
+      }
+    });
+  </script>
+</body>
+</html>
